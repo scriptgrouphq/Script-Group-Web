@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script Group HQ</title>
+  
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap">
+  
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-zinc-950 text-white font-light overflow-x-hidden">
+
+  <!-- Top Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-lg">
+    <div class="max-w-screen-2xl mx-auto px-8 py-6 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-4">
+        <img src="Images/logo.png" alt="Script Group Logo" class="w-10 h-10 object-contain">
+        <div>
+          <h1 class="text-2xl tracking-tighter font-medium">Script Group</h1>
+          <p class="text-[10px] text-zinc-500 -mt-1 tracking-[2px]">HQ</p>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-10 text-sm uppercase tracking-widest font-light">
+        <a href="#" onclick="navigateTo('home')" class="hover:text-white transition-colors">Home</a>
+        <a href="#" onclick="navigateTo('projects')" class="hover:text-white transition-colors">Projects</a>
+        <a href="#" onclick="navigateTo('products')" class="hover:text-white transition-colors">Products</a>
+        <a href="#" onclick="navigateTo('about')" class="hover:text-white transition-colors">About</a>
+        <a href="#" onclick="navigateTo('contact')" class="hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button id="hamburger" 
+              class="md:hidden w-11 h-11 flex items-center justify-center text-2xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-[73px] left-0 right-0 bg-zinc-950 border-t border-zinc-800 py-8 px-8">
+      <div class="flex flex-col gap-8 text-lg uppercase tracking-widest">
+        <a href="#" onclick="navigateTo('home'); closeMobileMenu()" class="hover:text-white">Home</a>
+        <a href="#" onclick="navigateTo('projects'); closeMobileMenu()" class="hover:text-white">Projects</a>
+        <a href="#" onclick="navigateTo('products'); closeMobileMenu()" class="hover:text-white">Products</a>
+        <a href="#" onclick="navigateTo('about'); closeMobileMenu()" class="hover:text-white">About</a>
+        <a href="#" onclick="navigateTo('contact'); closeMobileMenu()" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="content" class="pt-28">
+    <!-- Content loaded dynamically from script.js -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* ====================== style.css - Space Black + Soft Gold ====================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', system-ui, sans-serif;
+    background-color: #0a0a0f;           /* Space Black */
+    color: #f4f4f5;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ==================== Global Spacing ==================== */
+section {
+    min-height: 100vh;
+    padding: 180px 8% 140px;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+/* ==================== Typography ==================== */
+h1 {
+    font-size: 5.2rem;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.06em;
+}
+
+h2 {
+    font-size: 3.8rem;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+}
+
+p {
+    font-size: 1.18rem;
+    color: #a8a8b0;
+    max-width: 720px;
+}
+
+/* ==================== Navigation ==================== */
+nav {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px);
+}
+
+nav.scrolled {
+    background-color: rgba(10, 10, 15, 0.98);
+    border-bottom-color: #1f1f25;
+}
+
+/* Menu Links */
+nav a {
+    position: relative;
+    transition: color 0.4s ease;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: #d4af37;        /* Soft Gold */
+    transition: width 0.5s ease;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+/* ==================== Cards ==================== */
+.project-card, .product-card {
+    background-color: #121218;
+    border: 1px solid #1f1f25;
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.project-card:hover, .product-card:hover {
+    border-color: #d4af37;        /* Soft Gold on hover */
+    transform: translateY(-25px);
+    box-shadow: 0 30px 60px -15px rgba(212, 175, 55, 0.15);
+}
+
+/* ==================== Accent Color (Soft Gold) ==================== */
+.text-gold { color: #d4af37; }
+.border-gold { border-color: #d4af37; }
+.bg-gold { background-color: #d4af37; }
+
+/* Status Tags */
+.border-emerald-500 { border-color: #10b981; }
+.text-emerald-400   { color: #34d399; }
+
+/* ==================== Hero ==================== */
+#home {
+    display: flex;
+    align-items: center;
+    padding-top: 220px;
+    min-height: 100vh;
+}
+
+.hero-text span {
+    font-size: 1.05rem;
+    letter-spacing: 7px;
+    color: #66666e;
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 1024px) {
+    h1 { font-size: 4.2rem; }
+    h2 { font-size: 3.1rem; }
+}
+
+@media (max-width: 640px) {
+    h1 { font-size: 3.4rem; }
+    h2 { font-size: 2.6rem; }
+}
